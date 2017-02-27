@@ -51,11 +51,12 @@ class Deck:
             self.draw_event(Card(None, None))
 
     def take(self):
-        """
-        We'll use this method in the beginning to take the 
-        top cards from the deck for the board.
-        """
-        pass
+        temp_cards = []
+
+        for x in range(28):
+            temp_cards.insert(0, self.cards.pop())
+
+        return temp_cards
 
     def draw_event(self, card):
         print('Deck:draw_event')
